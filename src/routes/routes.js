@@ -8,8 +8,8 @@ export default [
         component: AppLayout,
         children: [
             {
-                path: '',
-                name: 'home',
+                path: 'dashboard',
+                name: 'dashboard',
                 component: () => import('@/views/Home.vue')
             }
         ]

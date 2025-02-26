@@ -7,7 +7,7 @@ export const useSessionStore = defineStore('SessionStore', () => {
     const startUserSession = (data) => {
         const date = new Date();
         const authCookie = getCookie() || {};
-        authCookie.access_token = data.access_token;
+        authCookie.access_token = data.token;
         authCookie.expires_in = date.setSeconds(
             date.getSeconds() + data.expires_in
         );

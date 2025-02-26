@@ -1,0 +1,165 @@
+.navbar-toggler {
+  padding: 0;
+}
+.navbar {
+  padding: 1em 0;
+}
+.custom-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 0;
+}
+.custom-nav img {
+  width: 32px;
+}
+.navbar-toggler img {
+  width: 2rem;
+  height: 2rem;
+}
+.custom-nav button:nth-child(1) {
+  color: #e52747;
+}
+.custom-nav button:nth-child(2) {
+  background-color: #e52747;
+}
+.login-outer-container {
+  width: 30em;
+  margin: 4em auto;
+}
+
+.login-container {
+  background-color: #ffffff;
+  padding: 3em 2.8em 2.2em 2.8em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.login-container img {
+  width: 6.5em;
+}
+.login-container h2 {
+  margin: 1.2em 0 0.2em 0;
+  font-weight: 600;
+  font-size: 1.8em;
+}
+.login-container .message {
+  font-size: 1em;
+  color: #475467;
+  margin: 0.8em 0 1.5em 0;
+}
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 1px 2px 0px #1018280d;
+  border-radius: 8px;
+}
+.login-container input[type="checkbox"] {
+  margin: 10px 0;
+}
+.email-label,
+.password-label {
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+  color: #344054;
+}
+.login-container a {
+  display: block;
+  margin: 10px 0;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+.login-container button {
+  background-color: #e41e3f;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1em;
+}
+.login-container button:hover {
+  background-color: #e52747;
+}
+
+.remember-pass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5em 0;
+}
+.remember-pass a {
+  color: #e52747;
+}
+.login-outer-container .footer {
+  margin-top: 1.5em;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  font-weight: 300;
+}
+.login-outer-container .footer span {
+  font-weight: 700;
+  color: #263238;
+}
+
+@media only screen and (max-width: 768px) {
+  .login-outer-container {
+    width: 25em;
+  }
+
+  .login-container {
+    padding: 2em 1.8em 1.2em 1.8em;
+  }
+  .custom-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .custom-nav button:nth-child(1) {
+    font-size: 0.8em;
+    padding: 0.4em 0.8em;
+  }
+  .custom-nav button:nth-child(2) {
+    font-size: 0.8em;
+    padding: 0.4em 0.8em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .login-outer-container {
+    width: 23em;
+  }
+  .login-outer-container .footer {
+    margin-top: 1.5em;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    font-weight: 300;
+  }
+  .custom-nav {
+    padding-left: 0;
+  }
+  .navbar-brand {
+    margin-right: 0;
+  }
+  .custom-nav button:nth-child(1) {
+    font-size: 0.8em;
+    padding: 0.2em 0.6em;
+  }
+  .custom-nav button:nth-child(2) {
+    font-size: 0.8em;
+    padding: 0.2em 0.6em;
+  }
+  .custom-nav img {
+    display: none;
+  }
+}

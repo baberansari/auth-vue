@@ -1,9 +1,9 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
-import { useToast } from 'primevue/usetoast';
+// import { useToast } from 'primevue/usetoast';
 
 export const useGlobalStore = defineStore('GlobalStore', () => {
-    const toast = useToast();
+    // const toast = useToast();
     const errors = ref(null);
     const loading = ref(false);
 
