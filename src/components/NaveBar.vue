@@ -1,6 +1,11 @@
 <script setup>
 import image from '../assets/images/welcome-dashboard.svg';
 import logo from '../assets/images/logo1.png';
+defineProps({
+  title: String,
+  description:String
+});
+
 </script>
 
 <template>
@@ -8,8 +13,8 @@ import logo from '../assets/images/logo1.png';
     <a href="#">
         <img :src="image" alt="Welcome Dashboard" />
     </a>
-    <h2 class="content-title">Dashboard</h2>
+    <h2 class="content-title">{{title}}</h2>
     <p class="content-para">
-        View and analyze candidate profiles with detailed data.
+        {{description}}
     </p>
 </template>

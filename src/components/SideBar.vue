@@ -28,17 +28,28 @@ const logout = async () => {
             <img src="" alt="" />
         </form>
         <li class=" ">
-            <a href=""><i class="fa-solid fa-home"></i>Dashboard</a>
+            <router-link :to="{ name: 'dashboard' }">
+                <i class="fa-solid fa-home"></i>Dashboard
+            </router-link>
+            
         </li>
         <li class=" ">
-            <a href=""><i class="fa-solid fa-user"></i>Female Candidates</a>
+            <router-link :to="{ name: 'female' }">
+                <i class="fa-solid fa-user"></i>Female Candidates
+            </router-link>
+           
         </li>
         <li class=" ">
-            <a href=""><i class="fa-solid fa-male"></i>Male Candidates</a>
+            <router-link :to="{ name: 'male' }">
+            <i class="fa-solid fa-male"></i> Male Candidates
+            </router-link>
+
         </li>
        
         <li class=" ">
-            <a href=""><i class="fa-solid fa-gear"></i>Settings</a>
+            <router-link :to="{ name: 'setting' }">
+                <i class="fa-solid fa-gear"></i> Settings
+            </router-link>
         </li>
         <li class=" ">
             <a href=""><i class="fa-solid fa-shield-halved"></i>SuccessStories</a>

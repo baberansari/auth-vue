@@ -1,36 +1,27 @@
 import { defineStore } from 'pinia';
-// import { AuthService } from '@/services';
-import { useGlobalStore, useSessionStore } from '@/stores';
+import AxiosService from '../services/Axios.service';
 import { ref } from 'vue';
 import axios from 'axios';
 
 export const useAuthStore = defineStore('AuthStore', () => {
-    const globalStore = useGlobalStore();
-    const currentUser = ref();
-    const sessionStore = useSessionStore();
+
 
     const register = async (form) => {
-        const { data } =  await axios.post("http://myapi.test/api/register", form);
-        sessionStore.startUserSession(data);
+        return AxiosService.post("http://myapi.test/api/register", form);
+  
     };
 
     const login = async (form) => {
-        const { data } = await axios.post("http://myapi.test/api/login", form);
-        sessionStore.startUserSession(data);
+        return AxiosService.post("http://myapi.test/api/login", form);
+       
     };
 
     const logout = async () => {
-        const { access_token: accessToken } = sessionStore.getCookie() || {};
-        await axios.post("http://myapi.test/api/logout", {}, { headers: { Authorization: `Bearer ${accessToken}` } });
-        sessionStore.clearSessionState();
-    };
-
- 
-
+        return AxiosService.post("http://myapi.test/api/logout");
+       
+    }
     return {
- 
         login,
-  
         register,
         logout,
  

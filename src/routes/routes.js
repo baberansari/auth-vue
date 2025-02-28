@@ -11,7 +11,23 @@ export default [
                 path: 'dashboard',
                 name: 'dashboard',
                 component: () => import('@/views/Home.vue')
+            },
+            {
+                path: 'male',
+                name: 'male',
+                component: () => import('@/views/MaleListing.vue')
+            },
+            {
+                path: 'female',
+                name: 'female',
+                component: () => import('@/views/FemaleListing.vue')
+            },
+            {
+                path: 'setting',
+                name: 'setting',
+                component: () => import('@/views/Setting.vue')
             }
+
         ]
     },
     {
