@@ -29,6 +29,26 @@ export const useAuthStore = defineStore('AuthStore', () => {
         });
        
     };
+    const forget = async (form) => {
+        return axios.post("http://myapi.test/api/forget-password", form)
+        .then(res => {
+            return res;
+        })
+        .catch(error => {
+            console.error("Login failed:", error);
+        });
+        
+    };
+    const resetPassword = async (form) => {
+        return axios.post("http://myapi.test/api/reset-password", form)
+        .then(res => {
+            return res;
+        })
+        .catch(error => {
+            console.error("Login failed:", error);
+        });
+        
+    };
 
     const logout = async () => {
      return   AxiosService.post("http://myapi.test/api/logout")
@@ -44,6 +64,8 @@ export const useAuthStore = defineStore('AuthStore', () => {
         login,
         register,
         logout,
+        forget,
+        resetPassword
  
     };
 });

@@ -55,10 +55,12 @@ export default [
                 component: () => import('@/views/auth/ForgetPassword.vue')
             },
             {
-                path: 'password/reset',
+                path: '/auth/reset-password/:token',
                 name: 'reset-password',
-                component: () => import('@/views/auth/ResetPassword.vue')
+                component: () => import('@/views/auth/ResetPassword.vue'),
+                props: route => ({ token: route.params.token, email: route.query.email })
             }
+            
         ]
     },
     {

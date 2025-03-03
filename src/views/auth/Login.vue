@@ -2,7 +2,7 @@
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores';
-
+import logo from '@/assets/images/logo2.png';
 const auth = useAuthStore();
 const router = useRouter();
 
@@ -27,7 +27,7 @@ const login = async (event) => {
 <template>
     <div class="login-outer-container">
         <div class="login-container">
-            <img src="" alt="Logo" />
+            <img :src="logo" alt="Logo" />
             <h2>Log in to admin account</h2>
             <p class="message">Welcome! Please enter your details.</p>
 
@@ -43,6 +43,10 @@ const login = async (event) => {
                         <input v-model="formData.keepLoggedIn" type="checkbox" id="remember" />
                         <label for="remember">Remember for 30 days</label>
                     </div>
+                    <router-link :to="{ name: 'forget-password' }">
+                        Forgot password
+                    </router-link>
+                 
                 </div>
 
                 <button type="submit">Sign in</button>
