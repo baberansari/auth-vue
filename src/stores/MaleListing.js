@@ -22,9 +22,16 @@ export const useMaleListingStore = defineStore('MaleListingStore', () => {
     const user = async ()=>{
         return AxiosService.get("http://myapi.test/api/user");
     }
+
+    const userUpdate = async (form)=>{
+        return AxiosService.post("http://myapi.test/api/userUpdate",form);
+    }
+    const changePassword = async (form)=>{
+        return AxiosService.post("http://myapi.test/api/change-password",form);
+    }
  
 
     return {
-        malelist,femalelist,user
+        malelist,femalelist,user,userUpdate,changePassword
     };
 });

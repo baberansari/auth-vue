@@ -62,7 +62,7 @@ const logout = async () => {
     </ul>
 </div>
     <div class="dashboard-cred" style="background-color: white;padding-top: 10px;">
-        <a @click="logout" class="d-flex">
+        <a @click="logout" class="d-flex" style="cursor: pointer;">
         <i class="fa-solid fa-right-from-bracket"></i>
         <div class="cred-details">
             <h4>Logout</h4>

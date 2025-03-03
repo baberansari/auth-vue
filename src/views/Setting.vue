@@ -48,7 +48,7 @@ const setActiveTab = (tab) => {
         </div>
     </div>
 
-    <Profile :user="userData" v-if="activeTab === 'profile'" />
+    <Profile :user="userData"  v-if="activeTab === 'profile'" />
     <ChangePassword v-if="activeTab === 'changePassword'" />
 
 </template>
