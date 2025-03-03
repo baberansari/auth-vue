@@ -11,11 +11,11 @@ export const useMaleListingStore = defineStore('MaleListingStore', () => {
     const sessionStore = useSessionStore();
 
     const malelist = async ()=>{
-        return AxiosService.get("http://muzzfinders.test/api/male-candidate");
+        return AxiosService.get("http://myapi.test/api/male-candidate");
 
     }
     const femalelist = async ()=>{
-     return  AxiosService.get("http://muzzfinders.test/api/female-candidate");
+     return  AxiosService.get("http://myapi.test/api/female-candidate");
        
        
     }

@@ -10,7 +10,7 @@ export const useDashBoardStore = defineStore('DashBoardStore', () => {
     const sessionStore = useSessionStore();
 
     const dashboard = async ()=>{
-        return AxiosService.get("http://muzzfinders.test/api/dashboard");
+        return AxiosService.get("http://myapi.test/api/dashboard");
     }
     return {
         dashboard

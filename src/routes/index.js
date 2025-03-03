@@ -11,7 +11,6 @@ router.beforeEach(async (to, from, next) => {
    
     const sessionStore = useSessionStore();
     const { access_token: accessToken } = sessionStore.getCookie() || {};
-
     const isAuth = to.path.startsWith('/auth');
 
     if (!accessToken) {
@@ -23,7 +22,7 @@ router.beforeEach(async (to, from, next) => {
     } else if (accessToken && !isAuth) {
         next();
     } else {
-        next({ name: 'home' });
+        next({ name: 'dashboard' });
     }
 });
 

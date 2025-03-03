@@ -45,6 +45,11 @@ export default [
                 component: () => import('@/views/auth/Signup.vue')
             },
             {
+                path: 'register',
+                name: 'register',
+                component: () => import('@/views/auth/Register.vue')
+            },
+            {
                 path: 'password/forget',
                 name: 'forget-password',
                 component: () => import('@/views/auth/ForgetPassword.vue')

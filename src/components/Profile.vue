@@ -2,6 +2,8 @@
 defineProps({
   user: Object
 });
+
+
 </script>
 
 <template>
@@ -26,6 +28,7 @@ defineProps({
             class="form-control" 
             name="last_name" 
             id="lastName" 
+            v-model="user.fname"
             placeholder="Last Name" />
         </div>
       </div>
