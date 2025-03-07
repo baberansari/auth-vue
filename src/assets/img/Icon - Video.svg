@@ -1,0 +1,11 @@
+<svg id="Icon_-_Video" data-name="Icon - Video" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Icon_-_Video_Background_Mask_" data-name="Icon - Video (Background/Mask)" width="24" height="24" fill="#2f6edb"/>
+    </clipPath>
+  </defs>
+  <rect id="Icon_-_Video_Background_Mask_2" data-name="Icon - Video (Background/Mask)" width="24" height="24" fill="rgba(0,0,0,0)"/>
+  <g id="Icon_-_Video-2" data-name="Icon - Video" clip-path="url(#clip-path)">
+    <path id="Vector" d="M4.113,15A3.91,3.91,0,0,1,0,10.939V4.061A3.91,3.91,0,0,1,4.113,0H9.905a3.91,3.91,0,0,1,4.113,4.061v6.879A3.91,3.91,0,0,1,9.905,15Zm13.844-2.38-1.48-.747a1.624,1.624,0,0,1-.888-1.457V4.583a1.618,1.618,0,0,1,.888-1.455l1.481-.749a1.384,1.384,0,0,1,1.373.064A1.432,1.432,0,0,1,20,3.662v7.676a1.43,1.43,0,0,1-.669,1.219,1.4,1.4,0,0,1-.743.216A1.384,1.384,0,0,1,17.957,12.621Z" transform="translate(2 4.5)" fill="#2f6edb"/>
+  </g>
+</svg>

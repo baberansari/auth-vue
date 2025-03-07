@@ -1,0 +1,11 @@
+<svg id="Icon_-_Calling" data-name="Icon - Calling" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Icon_-_Calling_Background_Mask_" data-name="Icon - Calling (Background/Mask)" width="24" height="24" fill="#2f6edb"/>
+    </clipPath>
+  </defs>
+  <rect id="Icon_-_Calling_Background_Mask_2" data-name="Icon - Calling (Background/Mask)" width="24" height="24" fill="rgba(0,0,0,0)"/>
+  <g id="Icon_-_Calling-2" data-name="Icon - Calling" clip-path="url(#clip-path)">
+    <path id="Union" d="M5.684,14.32C-2.993,5.644.761,3.173,1.074,2.784c3.11-3.109,3.592-1.695,6.041.753,2.54,2.54-2.072,3.447,1.917,7.436,2.178,2.177,3.437,1.79,4.544,1.4a2.273,2.273,0,0,1,2.89.509c2.449,2.448,3.857,2.939.753,6.04A3.088,3.088,0,0,1,14.811,20C13.08,20,10.237,18.871,5.684,14.32Zm9.151-6.389h0a3.463,3.463,0,0,0-2.744-2.75.862.862,0,0,1-.677-1.009.853.853,0,0,1,1-.68,5.174,5.174,0,0,1,4.1,4.109.865.865,0,0,1-.678,1.012.943.943,0,0,1-.165.015A.859.859,0,0,1,14.836,7.931Zm3.455-.075a6.912,6.912,0,0,0-6.126-6.138A.863.863,0,0,1,11.731.184a.818.818,0,0,1,.625-.176,8.617,8.617,0,0,1,7.638,7.656.857.857,0,0,1-.756.95.705.705,0,0,1-.1.006A.856.856,0,0,1,18.291,7.856Z" transform="translate(2 2)" fill="#2f6edb"/>
+  </g>
+</svg>

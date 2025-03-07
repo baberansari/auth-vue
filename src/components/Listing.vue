@@ -1,6 +1,8 @@
 <script setup>
 import NaveBar from './NaveBar.vue';
 import { ref, computed, watch, defineProps } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+const route = useRoute();
 
 const props = defineProps({
     response: {
@@ -65,7 +67,7 @@ const prevPage = () => {
 
 <template>
     <NaveBar 
-        title="Male Candidate" 
+        :title="route.name" 
         description="View and analyze candidate profiles with detailed data." 
     />
 

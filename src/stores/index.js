@@ -5,5 +5,6 @@ export * from './Global';
 export * from './Session';
 export * from './Dashboard';
 export * from './MaleListing';
+export * from './Chat';
 
 export default createPinia();

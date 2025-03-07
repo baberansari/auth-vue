@@ -1,5 +1,6 @@
 import AppLayout from '@/layout/AppLayout.vue';
 import AuthLayout from '@/layout/AuthLayout.vue';
+import ChatLayout from '@/layout/ChatLayout.vue';
 import Login from '@/views/auth/Login.vue';
 
 export default [
@@ -26,10 +27,29 @@ export default [
                 path: 'setting',
                 name: 'setting',
                 component: () => import('@/views/Setting.vue')
+            },
+
+            {
+                path: 'chats',
+                name: 'chats',
+                component: () => import('@/views/Chat.vue')
             }
 
         ]
     },
+    // {
+    //     path: '/',
+    //     component: ChatLayout,
+    //     children: [
+          
+    //         {
+    //             path: 'chats',
+    //             name: 'chats',
+    //             component: () => import('@/views/Chat.vue')
+    //         }
+
+    //     ]
+    // },
     {
         path: '/auth',
         component: AuthLayout,
@@ -39,11 +59,7 @@ export default [
                 name: 'login',
                 component: Login
             },
-            {
-                path: 'signup',
-                name: 'signup',
-                component: () => import('@/views/auth/Signup.vue')
-            },
+           
             {
                 path: 'register',
                 name: 'register',

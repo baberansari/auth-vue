@@ -7,7 +7,6 @@ import NaveBar from '../components/NaveBar.vue';
     <div id="wrapper">
         <SideBar></SideBar>
         <section  id="content-wrapper">
-                  
             <router-view />
         </section>
     </div>

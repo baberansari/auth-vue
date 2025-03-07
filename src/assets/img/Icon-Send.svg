@@ -1,0 +1,11 @@
+<svg id="Icon_-_Send" data-name="Icon - Send" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Icon_-_Send_Background_Mask_" data-name="Icon - Send (Background/Mask)" width="16" height="16" fill="none"/>
+    </clipPath>
+  </defs>
+  <rect id="Icon_-_Send_Background_Mask_2" data-name="Icon - Send (Background/Mask)" width="16" height="16" fill="none"/>
+  <g id="Icon_-_Send-2" data-name="Icon - Send" clip-path="url(#clip-path)">
+    <path id="Vector" d="M12.232,6.674a1.333,1.333,0,0,1-.555.493L1.911,11.794a1.387,1.387,0,0,1-.58.167A1.333,1.333,0,0,1,.117,10.08l1.52-3.453H5.331a.667.667,0,0,0,0-1.333H1.637L.117,1.874A1.333,1.333,0,0,1,1.9.127h0l9.767,4.627a1.336,1.336,0,0,1,.562,1.92Z" transform="translate(2.003 2.04)" fill="#fff"/>
+  </g>
+</svg>

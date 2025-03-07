@@ -7,6 +7,7 @@ import 'primeicons/primeicons.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'boxicons/css/boxicons.min.css';
 import '../assets/admin/css/login.css';
+import '../assets/css/chat.css';
 import '../assets/admin/css/style.css';
 import '../assets/admin/css/welcomeAdmin.css';
 import '../assets/admin/css/dashboard_2.css';
