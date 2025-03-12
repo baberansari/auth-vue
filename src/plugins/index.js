@@ -1,5 +1,7 @@
 import pinia from '../stores';
 import router from '../routes';
+import { abilitiesPlugin } from '@casl/vue';
+import { ability } from '@/plugins/ability'; // the global ability instance
 
 
 import 'primeicons/primeicons.css';
@@ -21,6 +23,9 @@ export function registerPlugins(app) {
    
     app.use(pinia);
     app.use(router);
+    app.use(abilitiesPlugin, ability, {
+        useGlobalProperties: true
+    });
    
 }
 
@@ -31,6 +36,12 @@ const directives = {
 const components = {
  
 };
-const plugins = [pinia, router];
+const plugins = [pinia, router,  [
+    abilitiesPlugin,
+    ability,
+    {
+        useGlobalProperties: true
+    }
+]];
 
 export { directives, components, plugins };

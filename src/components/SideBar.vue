@@ -27,7 +27,8 @@ const logout = async () => {
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
             <img src="" alt="" />
         </form>
-        <li class=" ">
+        <li class=" "  v-if="
+            $ability.can('view_dashboard')">
             <router-link :to="{ name: 'dashboard' }">
                 <i class="fa-solid fa-home"></i>Dashboard
             </router-link>

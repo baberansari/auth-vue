@@ -3,6 +3,7 @@ import AxiosService from '../services/Axios.service';
 import { useGlobalStore, useSessionStore } from '@/stores';
 import { ref } from 'vue';
 import axios from 'axios';
+import { updateAbility } from '@/plugins/ability';
 
 export const useAuthStore = defineStore('AuthStore', () => {
 
@@ -16,6 +17,14 @@ export const useAuthStore = defineStore('AuthStore', () => {
         .catch(error => {
             console.error("Login failed:", error);
         });
+    };
+    // const user = async () => {
+    //     return AxiosService.get("http://auth-vue-api.test/api/user");
+
+    // };
+    const user = async () => {
+        const res = (await AxiosService.get("http://auth-vue-api.test/api/user")).data;
+        updateAbility(res.user.permissions);
     };
 
     const login = async (form) => {
@@ -65,7 +74,7 @@ export const useAuthStore = defineStore('AuthStore', () => {
         register,
         logout,
         forget,
-        resetPassword
+        resetPassword,user
  
     };
 });

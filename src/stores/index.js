@@ -7,5 +7,6 @@ export * from './Dashboard';
 export * from './MaleListing';
 export * from './Chat';
 export * from './Bond';
+export * from './RolePermission';
 
 export default createPinia();
