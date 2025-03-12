@@ -5,16 +5,16 @@ import axios from 'axios';
 
 export const useChatStore = defineStore('ChatStore', () => {
     const chats = async ()=>{
-        return AxiosService.get("http://myapi.test/api/chats");
+        return AxiosService.get("http://auth-vue-api.test/api/chats");
     }
     const info = async (pay)=>{
       
-        return AxiosService.get("http://myapi.test/api/chats/profile/info", {
+        return AxiosService.get("http://auth-vue-api.test/api/chats/profile/info", {
             params: pay  // Send parameters correctly
         });
     }
     const messages = async (pay) => {
-        return AxiosService.get("http://myapi.test/api/messages", {
+        return AxiosService.get("http://auth-vue-api.test/api/messages", {
             params: pay  // Send parameters correctly
         });
     };

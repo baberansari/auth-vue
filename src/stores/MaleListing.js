@@ -11,23 +11,23 @@ export const useMaleListingStore = defineStore('MaleListingStore', () => {
     const sessionStore = useSessionStore();
 
     const malelist = async ()=>{
-        return AxiosService.get("http://myapi.test/api/male-candidate");
+        return AxiosService.get("http://auth-vue-api.test/api/male-candidate");
 
     }
     const femalelist = async ()=>{
-     return  AxiosService.get("http://myapi.test/api/female-candidate");
+     return  AxiosService.get("http://auth-vue-api.test/api/female-candidate");
        
        
     }
     const user = async ()=>{
-        return AxiosService.get("http://myapi.test/api/user");
+        return AxiosService.get("http://auth-vue-api.test/api/user");
     }
 
     const userUpdate = async (form)=>{
-        return AxiosService.post("http://myapi.test/api/userUpdate",form);
+        return AxiosService.post("http://auth-vue-api.test/api/userUpdate",form);
     }
     const changePassword = async (form)=>{
-        return AxiosService.post("http://myapi.test/api/change-password",form);
+        return AxiosService.post("http://auth-vue-api.test/api/change-password",form);
     }
  
 

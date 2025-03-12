@@ -45,6 +45,12 @@ const logout = async () => {
             </router-link>
 
         </li>
+        <li class=" ">
+            <router-link :to="{ name: 'bond' }">
+                <i class="fa-solid fa-hands-bound"></i> Bonds
+            </router-link>
+
+        </li>
        
         <li class=" ">
             <router-link :to="{ name: 'setting' }">

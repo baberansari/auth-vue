@@ -201,7 +201,7 @@ function uploadFile(file) {
     const imageFile = file;
 
     formData.append('file', imageFile);
-    const url = 'http://myapi.test/api/chats/messages/upload';
+    const url = 'http://auth-vue-api.test/api/chats/messages/upload';
     axios.post(url, formData, {
         headers: {
             'Content-Type': 'multipart/form-data'
@@ -287,7 +287,7 @@ function sendRunTimeMessage() {
 
     socket.on('message', async function (msg) {
       var pay = { sender_id: msg.sender_id };
-        await axios.get('http://myapi.test/api/chats/sender-name',{
+        await axios.get('http://auth-vue-api.test/api/chats/sender-name',{
             params: pay  // Send parameters correctly
         })
             .then(response => {

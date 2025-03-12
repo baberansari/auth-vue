@@ -24,6 +24,16 @@ export default [
                 component: () => import('@/views/FemaleListing.vue')
             },
             {
+                path: 'bond',
+                name: 'bond',
+                component: () => import('@/views/Bond.vue')
+            },
+            {
+                path: 'add-bond',
+                name: 'add-bond',
+                component: () => import('@/views/BondAdd.vue')
+            },
+            {
                 path: 'setting',
                 name: 'setting',
                 component: () => import('@/views/Setting.vue')

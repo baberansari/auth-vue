@@ -8,7 +8,7 @@ export const useAuthStore = defineStore('AuthStore', () => {
 
     const sessionStore = useSessionStore();
     const register = async (form) => {
-        return AxiosService.post("http://myapi.test/api/register", form)
+        return AxiosService.post("http://auth-vue-api.test/api/register", form)
         .then(res => {
             sessionStore.startUserSession(res.data);
             return res;
@@ -19,7 +19,7 @@ export const useAuthStore = defineStore('AuthStore', () => {
     };
 
     const login = async (form) => {
-       return AxiosService.post("http://myapi.test/api/login", form)
+       return AxiosService.post("http://auth-vue-api.test/api/login", form)
         .then(res => {
             sessionStore.startUserSession(res.data);
             return res;
@@ -30,7 +30,7 @@ export const useAuthStore = defineStore('AuthStore', () => {
        
     };
     const forget = async (form) => {
-        return axios.post("http://myapi.test/api/forget-password", form)
+        return axios.post("http://auth-vue-api.test/api/forget-password", form)
         .then(res => {
             return res;
         })
@@ -40,7 +40,7 @@ export const useAuthStore = defineStore('AuthStore', () => {
         
     };
     const resetPassword = async (form) => {
-        return axios.post("http://myapi.test/api/reset-password", form)
+        return axios.post("http://auth-vue-api.test/api/reset-password", form)
         .then(res => {
             return res;
         })
@@ -51,7 +51,7 @@ export const useAuthStore = defineStore('AuthStore', () => {
     };
 
     const logout = async () => {
-     return   AxiosService.post("http://myapi.test/api/logout")
+     return   AxiosService.post("http://auth-vue-api.test/api/logout")
         .then(res => {
             sessionStore.clearSessionState();
         })
