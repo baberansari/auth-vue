@@ -1,30 +1,32 @@
 <script setup>
-import SideBar from '@/components/SideBar.vue';
-import NaveBar from '../components/NaveBar.vue';
-import { useAuthStore}  from '@/stores';
-import {ref,onMounted} from 'vue';
-const home = useAuthStore();
-const dashboardData = ref([]); // Store the fetched data
+import SideBar from "@/components/SideBar.vue";
+import NaveBar from "../components/NaveBar.vue";
+import { useAuthStore } from "@/stores";
+import { ref, onBeforeMount } from "vue";
 
-const fetchUser = async () => {
+const authStore = useAuthStore();
+
+const me = async () => {
   try {
-    const res = await home.user();
-    if (res && res.data.data) {
-        
-      dashboardData.value = Object.values(res.data.data); // Convert object to array
-    }
+    const res = await authStore.me();
   } catch (error) {
     console.error("Dashboard fetch failed:", error);
   }
 };
 
-onMounted(fetchUser);
+onBeforeMount(async () => {
+  await me();
+});
 </script>
 <template>
-    <div id="wrapper">
-        <SideBar></SideBar>
-        <section  id="content-wrapper">
-            <router-view />
-        </section>
-    </div>
+  <template v-if="authStore.routeForbidden">
+    <h1>403 Forbidden</h1>
+    <p>you dont have access to this page</p>
+  </template>
+  <div id="wrapper" v-else>
+    <SideBar></SideBar>
+    <section id="content-wrapper">
+      <router-view />
+    </section>
+  </div>
 </template>
