@@ -26,7 +26,8 @@ onMounted(fetchDashboard);
     title="DashBoard" 
     description="View and analyze candidate profiles with detailed data."
     />
-  <div class="mt-4 cards">
+  <div class="mt-4 cards"  v-if="
+            $ability.can('view_dashboard_admin')">
     <DashCard 
       v-for="(item, index) in dashboardData" 
       :key="index" 

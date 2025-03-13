@@ -34,34 +34,40 @@ const logout = async () => {
             </router-link>
             
         </li>
-        <li class=" ">
+        <li class=" "  v-if="
+            $ability.can('view_candidate')">
             <router-link :to="{ name: 'female' }">
                 <i class="fa-solid fa-user"></i>Female Candidates
             </router-link>
            
         </li>
-        <li class=" ">
+        <li class=" "  v-if="
+            $ability.can('view_candidate')">
             <router-link :to="{ name: 'male' }">
             <i class="fa-solid fa-male"></i> Male Candidates
             </router-link>
 
         </li>
-        <li class=" ">
+        <li class=" "  v-if="
+            $ability.can('view_bond')">
             <router-link :to="{ name: 'bond' }">
                 <i class="fa-solid fa-hands-bound"></i> Bonds
             </router-link>
 
         </li>
        
-        <li class=" ">
+        <li class=" "  v-if="
+            $ability.can('view_settings')">
             <router-link :to="{ name: 'setting' }">
                 <i class="fa-solid fa-gear"></i> Settings
             </router-link>
         </li>
-        <li class=" ">
+        <li class=" "  v-if="
+            $ability.can('view_success_stories')">
             <a href=""><i class="fa-solid fa-shield-halved"></i>SuccessStories</a>
         </li>
-        <li class="">
+        <li class="" v-if="
+            $ability.can('view_latest_notification')">
             <a href=""><i class="fa-solid fa-bell"></i>Latest Notification</a>
         </li>
        

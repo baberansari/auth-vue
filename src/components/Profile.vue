@@ -125,7 +125,7 @@ const userUpdate = async () => {
       </div>
       <div class="input-container image-upload-setting col">
         <img
-          :src="props.user?.image ? 'http://myapi.test/' + props.user.image : 'default-image.jpg'"
+          :src="props.user?.image ? 'http://auth-vue-api.test/' + props.user.image : 'default-image.jpg'"
           alt="Profile"
           class="upload-preview"
           id="profilePreview"
