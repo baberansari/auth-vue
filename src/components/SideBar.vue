@@ -64,7 +64,10 @@ const logout = async () => {
         </li>
         <li class=" "  v-if="
             $ability.can('view_success_stories')">
-            <a href=""><i class="fa-solid fa-shield-halved"></i>SuccessStories</a>
+               <router-link :to="{ name: 'winbond' }">
+                <i class="fa-solid fa-shield-halved"></i> SuccessStories
+            </router-link>
+          
         </li>
         <li class="" v-if="
             $ability.can('view_latest_notification')">

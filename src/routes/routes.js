@@ -30,6 +30,11 @@ export default [
         component: () => import("@/views/Bond.vue"),
       },
       {
+        path: "winbond",
+        name: "winbond",
+        component: () => import("@/views/SuccessStories.vue"),
+      },
+      {
         path: "add-bond",
         name: "add-bond",
         component: () => import("@/views/BondAdd.vue"),
@@ -44,6 +49,11 @@ export default [
         path: "chats",
         name: "chats",
         component: () => import("@/views/Chat.vue"),
+      },
+      {
+        path: "notification",
+        name: "notification",
+        component: () => import("@/views/Notification.vue"),
       },
     ],
   },

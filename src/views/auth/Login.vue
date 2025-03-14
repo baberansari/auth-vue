@@ -1,8 +1,9 @@
 <script setup>
-import { reactive } from 'vue'
+import { reactive,ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { useAuthStore } from '@/stores';
+import { useAuthStore,useSessionStore } from '@/stores';
 import logo from '@/assets/images/logo2.png';
+
 const auth = useAuthStore();
 const router = useRouter();
 
@@ -11,15 +12,22 @@ const formData = reactive({
   password: '',
   keepLoggedIn: false,
 });
-
+const loading = ref(false);
+const errors = ref([]);
+const sessionStore = useSessionStore();
 const login = async (event) => {
    
     try {
-        await auth.login({ email: formData.email, password: formData.password });
+        loading.value =true;
+      const  res =   await auth.login({ email: formData.email, password: formData.password });
+      sessionStore.startUserSession(res.data);
         router.push("/dashboard");
 
     } catch (error) {
-        console.error("Login failed:", error);
+        errors.value = error.response.data.errors;
+        console.log("Login failed:", error.response.data.errors);
+    }finally{
+        loading.value =false;
     }
 };
 </script>
@@ -34,10 +42,13 @@ const login = async (event) => {
             <form @submit.prevent="login">  <!-- Prevent default submission -->
                 <label class="email-label" for="email">Email</label>
                 <input v-model="formData.email" type="email" placeholder="Enter your email" required autocomplete="email" autofocus />
+               
+                <span class="invalid-feedback" v-if="errors.email">{{ errors.email[0] }}</span>
+
 
                 <label class="password-label" for="password">Password</label>
                 <input v-model="formData.password" type="password" required autocomplete="current-password" placeholder="••••••••" />
-
+               
                 <div class="remember-pass">
                     <div>
                         <input v-model="formData.keepLoggedIn" type="checkbox" id="remember" />
@@ -48,8 +59,12 @@ const login = async (event) => {
                     </router-link>
                  
                 </div>
-
-                <button type="submit">Sign in</button>
+                <button type="submit" :disabled="loading">
+                    <div v-if="loading" class="spinner-border text-light" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <span v-else>Sign in</span>
+                </button>
             </form>
             <router-link :to="{ name: 'register' }">
                 Sign up
@@ -64,3 +79,8 @@ const login = async (event) => {
         </div>
     </div>
 </template>
+<style>
+.invalid-feedback{
+    display:block;
+}
+</style>

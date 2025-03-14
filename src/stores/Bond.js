@@ -16,7 +16,13 @@ export const useBondStore = defineStore('BondStore', () => {
     const category = async ()=>{
         return AxiosService.get("http://auth-vue-api.test/api/bond-category");
     }
+    const winBond = async ()=>{
+        return AxiosService.get("http://auth-vue-api.test/api/win-bond");
+    }
+    const notification = async ()=>{
+        return AxiosService.get("http://auth-vue-api.test/api/notification");
+    }
     return {
-        bondlist,addBond,category
+        bondlist,addBond,category,winBond,notification
     };
 });

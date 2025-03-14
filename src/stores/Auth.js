@@ -34,14 +34,8 @@ export const useAuthStore = defineStore("AuthStore", () => {
   };
 
   const login = async (form) => {
-    return AxiosService.post("http://auth-vue-api.test/api/login", form)
-      .then((res) => {
-        sessionStore.startUserSession(res.data);
-        return res;
-      })
-      .catch((error) => {
-        console.error("Login failed:", error);
-      });
+    return AxiosService.post("http://auth-vue-api.test/api/login", form);
+     
   };
   const forget = async (form) => {
     return axios
