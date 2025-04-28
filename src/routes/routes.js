@@ -60,6 +60,16 @@ export default [
         name: "notification",
         component: () => import("@/views/Notification.vue"),
       },
+      {
+        path: "upload-list",
+        name: "upload-list",
+        component: () => import("@/views/UploadList.vue"),
+      },
+      {
+        path: "upload-list-bond",
+        name: "upload-list-bond",
+        component: () => import("@/views/UploadListBond.vue"),
+      },
     ],
   },
   // {

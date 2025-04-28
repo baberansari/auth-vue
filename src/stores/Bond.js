@@ -9,6 +9,9 @@ export const useBondStore = defineStore('BondStore', () => {
             params: pay  // Send parameters correctly
         });
     }
+    const prizelist = async ()=>{
+        return AxiosService.get("http://auth-vue-api.test/api/prize-list");
+    }
 
     const addBond = async (form)=>{
         return AxiosService.post("http://auth-vue-api.test/api/add-bond",form);
@@ -28,7 +31,10 @@ export const useBondStore = defineStore('BondStore', () => {
     const notification = async ()=>{
         return AxiosService.get("http://auth-vue-api.test/api/notification");
     }
+    const uploadList = async (form)=>{
+        return AxiosService.post("http://auth-vue-api.test/api/upload-list",form);
+    }
     return {
-        bondlist,addBond,category,winBond,notification,viewBond,updateBond
+        bondlist,addBond,category,winBond,notification,viewBond,updateBond,uploadList,prizelist
     };
 });

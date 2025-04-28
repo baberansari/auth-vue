@@ -32,7 +32,6 @@ export const useAuthStore = defineStore("AuthStore", () => {
   const setRouteForbidden = async (value) => {
     routeForbidden.value = value;
   };
-
   const login = async (form) => {
     return AxiosService.post("http://auth-vue-api.test/api/login", form);
      
