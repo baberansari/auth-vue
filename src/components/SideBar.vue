@@ -37,17 +37,17 @@ const logout = async () => {
         <li class=" "  v-if="
             $ability.can('view_candidate')">
             <router-link :to="{ name: 'female' }">
-                <i class="fa-solid fa-user"></i>Female Candidates
+                <i class="fa-solid fa-user"></i>User 
             </router-link>
            
         </li>
-        <li class=" "  v-if="
+        <!-- <li class=" "  v-if="
             $ability.can('view_candidate')">
             <router-link :to="{ name: 'male' }">
             <i class="fa-solid fa-male"></i> Male Candidates
             </router-link>
 
-        </li>
+        </li> -->
         <li class=" "  v-if="
             $ability.can('view_bond')">
             <router-link :to="{ name: 'bond' }">

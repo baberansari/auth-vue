@@ -13,6 +13,12 @@ export const useBondStore = defineStore('BondStore', () => {
     const addBond = async (form)=>{
         return AxiosService.post("http://auth-vue-api.test/api/add-bond",form);
     }
+    const updateBond = async (form)=>{
+        return AxiosService.post("http://auth-vue-api.test/api/update-bond",form);
+    }
+    const viewBond = async(id)=>{
+        return AxiosService.get("http://auth-vue-api.test/api/view-bond/"+id);
+    }
     const category = async ()=>{
         return AxiosService.get("http://auth-vue-api.test/api/bond-category");
     }
@@ -23,6 +29,6 @@ export const useBondStore = defineStore('BondStore', () => {
         return AxiosService.get("http://auth-vue-api.test/api/notification");
     }
     return {
-        bondlist,addBond,category,winBond,notification
+        bondlist,addBond,category,winBond,notification,viewBond,updateBond
     };
 });

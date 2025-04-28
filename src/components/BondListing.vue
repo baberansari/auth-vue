@@ -96,8 +96,8 @@ const prevPage = () => {
                         {{ item.status }}
                     </td>
                     <td>
-                        <router-link :to="`/candidates/${item.id}`" class="find-matches-btn">
-                            View
+                        <router-link :to="`/edit-bond/${item.id}`" class="find-matches-btn">
+                            Edit
                         </router-link>
                     </td>
                 </tr>

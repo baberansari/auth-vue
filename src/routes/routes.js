@@ -40,6 +40,11 @@ export default [
         component: () => import("@/views/BondAdd.vue"),
       },
       {
+        path: "edit-bond/:id",
+        name: "edit-bond",
+        component: () => import("@/views/ViewBond.vue"),
+      },
+      {
         path: "setting",
         name: "setting",
         component: () => import("@/views/Setting.vue"),
