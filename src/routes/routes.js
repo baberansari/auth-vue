@@ -70,6 +70,11 @@ export default [
         name: "upload-list-bond",
         component: () => import("@/views/UploadListBond.vue"),
       },
+      {
+        path: "scan",
+        name: "scan",
+        component: () => import("@/views/Scan.vue"),
+      },
     ],
   },
   // {

@@ -74,18 +74,18 @@ const prevPage = () => {
     <div class="recent-activities total-candidates active">
         <div class="header">
             <div>
-                <h2>Total Bonds You have</h2>
+                <h2>Upload Listing You </h2>
                 <p>Keep track of matches.</p>
             </div>
 
-            <div class="input-box">
+            <!-- <div class="input-box">
                 <input 
                     type="text" 
                     placeholder="Search by bond number" 
                     class="form-control search"
                     v-model="searchQuery"
                 >
-            </div>
+            </div> -->
 
             <div class="input-box">
                 <input 

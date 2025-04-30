@@ -60,8 +60,8 @@ const prevPage = () => {
         :title="'Win Bond'" 
         description="View and analyze candidate profiles with detailed data." 
     /><br>
-    <router-link :to="{ name: 'add-bond' }" class="find-matches-btn">
-                            Add New Bond</router-link>
+    <router-link :to="{ name: 'scan' }" class="find-matches-btn">
+                            Scan</router-link>
     <div class="recent-activities total-candidates active">
         <div class="header">
             <div>
